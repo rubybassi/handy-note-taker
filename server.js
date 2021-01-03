@@ -11,7 +11,7 @@ app.use(express.json());
 // middleware to serve CSS files and JavaScript files in the public directory
 app.use(express.static("public"));
 
-// mapping to routes folders
+// mapping routes folders
 require("./routes/api")(app);
 require("./routes/html")(app);
 
