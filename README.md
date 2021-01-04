@@ -34,7 +34,7 @@ The application is hosted on Heroku and can be accessed here:(https://youtu.be/n
 ## Execute
 Clone the repo and in the command line run `npm install` to download all the npm package dependancies which include Express, Nodemon and Nanoid.
 
-Then invoke the application with command `node server.js` or by using the nodemon script `npm run dev server.js`.
+Then invoke the application with command `node server.js` or by using the nodemon script `npm run dev`.
 
 ## Usage
 On the client browser, the application will display any stored notes and make these availabe to view and delete. The user can also add new notes which send a post request to the server.
