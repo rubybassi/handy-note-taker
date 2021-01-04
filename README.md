@@ -57,6 +57,8 @@ MIT
 * [Express](https://www.npmjs.com/package/express)
 * [nanoid npm package](https://www.npmjs.com/package/nanoid)
 * [nodemon npm package](https://www.npmjs.com/package/nodemon)
+* [Postman](https://www.postman.com/)
+* [Heroku](https://www.heroku.com/)
 
 ## Questions
 Follow me on [GitHub: rubybassi](https://github.com/rubybassi)
