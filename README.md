@@ -24,9 +24,9 @@ For this project i was provided client-side html, css and javascript files, and 
 
 ## Preview
 
-> Watch a full demo video on my [YouTube channel]()
+> Watch a full demo video on my [YouTube channel](https://www.youtube.com/watch?v=9_Pekb0DswU&feature=youtu.be)
 
-The application is hosted on Heroku and can be accessed here:(https://youtu.be/nbFUqCOI3fQ).
+The application is hosted on Heroku and can be accessed here:(https://handy-note-taker-express.herokuapp.com/).
 
 ![Sample Homepage](./public/assets/images/homepage-demo.png)
 ![Sample Notes](./public/assets/images/notes-demo.png)
