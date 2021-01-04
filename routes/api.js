@@ -1,9 +1,17 @@
 const path = require("path");
 let db = require("../db/db.json");
-const fs = require("fs");
+const fs = require("fs").promises;
 const { nanoid } = require("nanoid");
 
 module.exports = app => {
+  // send notes
+  app.get("/api/notes", (req, res) => {
+    //console.log("request object:", req);
+    //const notes = retrieveNotes();
+    retrieveNotes().then(data => res.json(data)).catch(err => console.log(err));
+    //res.json(notes);
+  });
+
   // recieve new note
   app.post("/api/notes", (req, res) => {
     const newNote = {
@@ -21,12 +29,6 @@ module.exports = app => {
     res.send(newNote);
   });
 
-  // send notes
-  app.get("/api/notes", (req, res) => {
-    //console.log("db is:", db);
-    res.json(db);
-  });
-
   // delete note
   app.delete("/api/notes/:id", (req, res) => {
     // console.log(req.params.id);
@@ -40,4 +42,13 @@ module.exports = app => {
     });
     res.end();
   });
+
+  // universal function for retrieving notes - set as async to allow promise chaining when called
+  const retrieveNotes = async () => {
+    const file = path.join(__dirname, "../db/db.json");
+    const data = await fs.readFile(file);
+    const notes = JSON.parse(data);
+    return notes;
+  };
 };
+
