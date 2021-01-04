@@ -2,7 +2,7 @@ const express = require("express");
 
 // setting express server
 const app = express();
-const port = process.env.port || 8000;
+const port = process.env.PORT || 8000;
 
 // middleware to parse data
 app.use(express.urlencoded({ extended: true }));
