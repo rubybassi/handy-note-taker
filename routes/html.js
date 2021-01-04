@@ -8,8 +8,8 @@ module.exports = app => {
     res.sendFile(path.join(__dirname, "../public/notes.html"));
   });
 
-  // load all other pages
-  app.get("*", (req, res) => {
+  // load homepage
+  app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 };
